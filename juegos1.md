@@ -262,3 +262,282 @@ Para inducir cooperación en entornos reales:
 - Penalizar rupturas creíbles.
 
 Diseña el flujo de información → transformas el equilibrio.
+
+---
+
+# 🔎 Señalización vs. Cribado (Screening)
+
+En juegos con información incompleta, el problema no es decidir:
+es **descubrir con quién estás jugando**.
+
+Existen dos mecanismos opuestos para revelar tipos.
+
+---
+
+## 1) Señalización (Signaling)
+
+**Quién actúa:** el jugador informado.
+**Objetivo:** revelar (o fingir) su tipo mediante una acción costosa.
+
+Formalmente:
+
+- El jugador conoce su tipo ( \theta \in {\theta_H, \theta_L} )
+- Elige una señal ( s )
+- El coste depende del tipo: ( c(s,\theta_H) < c(s,\theta_L) )
+
+Condición de separación:
+
+[
+u_H(s_H) - c(s_H,\theta_H) > u_H(s_L) - c(s_L,\theta_H)
+]
+[
+u_L(s_L) - c(s_L,\theta_L) > u_L(s_H) - c(s_H,\theta_L)
+]
+
+Solo si estas desigualdades se cumplen, los tipos se **separan**.
+
+---
+
+## 2) Cribado (Screening)
+
+**Quién actúa:** el jugador no informado.
+**Objetivo:** diseñar opciones para que el otro se **autoseleccione**.
+
+Formalmente:
+
+- Diseñas un menú de contratos ( {m_1, m_2} )
+- Cada tipo elige el que maximiza su utilidad.
+
+Restricciones:
+
+- **Incentivo**: cada tipo prefiere su contrato.
+- **Participación**: cada tipo acepta.
+
+Esto traslada la revelación al propio jugador informado.
+
+---
+
+## 3) Comparación estructural
+
+| Dimensión    | Señalización          | Cribado                |
+| ------------ | --------------------- | ---------------------- |
+| Quién revela | El informado          | El no informado        |
+| Herramienta  | Acción costosa        | Menú de opciones       |
+| Riesgo       | Falsificación         | Auto-selección forzada |
+| Control      | Bajo                  | Alto                   |
+| Equilibrio   | Separador o agrupador | Autoseparación         |
+
+---
+
+## 4) Principio clave
+
+> No revelas información: **diseñas incentivos para que se revele sola**.
+
+Cambias el espacio de elecciones → cambias el tipo de equilibrio.
+
+Entramos en la pieza que **cierra el sistema**: sin compromiso creíble, todo equilibrio cooperativo es frágil.
+
+---
+
+# 🔒 Mecanismos de Compromiso Creíble
+
+## 1) Definición formal
+
+Un compromiso es **creíble** cuando:
+
+> una vez elegido, **ya no conviene desviarse**, aunque las circunstancias cambien.
+
+Formalmente, una estrategia ( s ) es creíble si es **secuencialmente racional** en cada sub-juego.
+
+---
+
+## 2) El problema sin compromiso
+
+En juegos dinámicos, muchos acuerdos colapsan por **inconsistencia temporal**:
+
+- Hoy prometes cooperar.
+- Mañana, cuando el otro ya cooperó, te conviene traicionar.
+
+Esto destruye la confianza incluso si todos desean cooperar.
+
+---
+
+## 3) Cómo se hace creíble
+
+Un compromiso se vuelve creíble cuando **eliminar la opción de desviarse** o **hacerla más costosa que cumplir**.
+
+### A) Autolimitación
+
+Reducir tu propio espacio estratégico.
+[
+\text{Desviación} \Rightarrow \text{Coste} > \text{Beneficio}
+]
+
+### B) Reglas automáticas
+
+Acciones contingentes predefinidas que se ejecutan sin discreción.
+
+### C) Garantías externas
+
+Terceros o mecanismos que ejecutan sanciones.
+
+---
+
+## 4) Efecto en el equilibrio
+
+Introducir compromiso cambia la estructura del juego:
+
+- El equilibrio no cooperativo deja de ser estable.
+- El perfil cooperativo se vuelve **equilibrio sub-juego perfecto**.
+
+No apelas a la moral.
+**Rediseñas el juego.**
+
+---
+
+## 5) Principio estructural
+
+> La cooperación se sostiene cuando romper el acuerdo deja de ser una opción rentable.
+
+Diseña compromisos que sobrevivan al tiempo.
+Eso convierte la promesa en estructura.
+
+---
+
+## A) Nash vs. Pareto — cerrar la paradoja correctamente
+
+Tienes razón: sin **Óptimo de Pareto**, el dilema queda moralizado, no formalizado.
+
+### Corrección estructural
+
+Debe introducirse explícitamente el contraste:
+
+- **Equilibrio de Nash**: estable frente a desviaciones unilaterales.
+- **Óptimo de Pareto**: eficiente en términos colectivos.
+
+En el Dilema del Prisionero:
+
+- (5,5) = Nash, **ineficiente**
+- (2,2) = Pareto-superior, **inestable**
+
+👉 Conclusión formal:
+
+> El conflicto central no es entre egoísmo y cooperación, sino entre **estabilidad estratégica** y **eficiencia social**.
+
+Esto prepara el terreno para todo lo que viene después (instituciones, compromiso, diseño de mecanismos).
+
+---
+
+## B) Puente entre repetición y bayesiano — reputación como creencia
+
+Totalmente de acuerdo: el salto de _Tit for Tat_ a ( \mu(\theta) ) necesita un **conector conceptual**.
+
+### Puente necesario
+
+Debe explicitarse que:
+
+- En juegos repetidos con información completa → **memoria**
+- En juegos con información incompleta → **creencia**
+
+Formalmente:
+
+> La reputación es la **memoria comprimida del pasado**, traducida en una distribución de probabilidad sobre tipos.
+
+Ese párrafo hace que el lector entienda que:
+
+- Bayes no reemplaza la repetición,
+- la **generaliza** cuando no puedes observar directamente.
+
+---
+
+## C) El factor de descuento ( \delta ) — explicitar el tiempo
+
+Aquí el punto es crítico, especialmente para ingeniería y economía.
+
+### Corrección necesaria
+
+Antes de usar la condición:
+[
+\delta > \frac{T - R}{T - P}
+]
+
+Debe definirse explícitamente:
+
+- ( \delta \in (0,1) )
+- representa **paciencia**, **horizonte temporal**, o **probabilidad de continuidad**
+- si ( \delta \to 0 ): juego casi estático → traición
+- si ( \delta \to 1 ): futuro dominante → cooperación
+
+👉 Traducción estructural:
+
+> La cooperación no depende de intenciones, sino del **peso matemático del futuro**.
+
+---
+
+## D) Equilibrios múltiples — falta una familia entera de juegos
+
+Este es un hueco real.
+
+El Dilema del Prisionero enseña **por qué la cooperación es difícil**,
+pero no **cómo se coordina cuando es posible**.
+
+### Extensión necesaria
+
+Introducir explícitamente:
+
+- **Juegos de coordinación**
+- múltiples equilibrios de Nash
+- problema central: **selección de equilibrio**, no incentivos
+
+Conceptos clave que deben aparecer:
+
+- focal points,
+- expectativas comunes,
+- historia,
+- normas.
+
+Esto conecta directamente con:
+
+- protocolos,
+- estándares,
+- convenciones sociales,
+- coordinación distribuida.
+
+---
+
+## E) Compromiso creíble — bajar a ingeniería sin perder formalismo
+
+Aquí coincido al 100%.
+La sección es correcta, pero **demasiado etérea** para arquitectos de sistemas.
+
+### Ajuste propuesto
+
+Sin narrativas históricas, pero con **equivalentes estructurales**:
+
+- Autolimitación → **inmutabilidad**
+- Reglas automáticas → **ejecución determinista**
+- Garantías externas → **verificadores / árbitros**
+
+Principio clave que debe quedar explícito:
+
+> Un compromiso creíble es una **restricción irreversible del espacio de estados futuros**.
+
+Eso lo vuelve directamente traducible a:
+
+- contratos,
+- protocolos,
+- APIs,
+- gobernanza algorítmica.
+
+---
+
+## Evaluación final (Harmony-style)
+
+Tu diagnóstico es correcto:
+el material es **coherente**, pero necesita:
+
+1. más contrastes formales (Nash vs Pareto),
+2. puentes conceptuales explícitos,
+3. definición temprana de variables críticas,
+4. apertura a juegos con múltiples equilibrios,
+5. traducción estructural a sistemas diseñables.
