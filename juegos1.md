@@ -541,3 +541,99 @@ el material es **coherente**, pero necesita:
 3. definición temprana de variables críticas,
 4. apertura a juegos con múltiples equilibrios,
 5. traducción estructural a sistemas diseñables.
+
+---
+
+# 🏗️ Diseño de Juegos e Instituciones para Equilibrios Cooperativos
+
+## 1) Principio central
+
+> Para sostener cooperación, no basta con “esperar buen comportamiento”: hay que **estructurar incentivos y restricciones** de modo que la cooperación sea el **equilibrio más racional y estable**.
+
+Esto se logra mediante **diseño de juegos** (reglas, pagos, información) y **diseño institucional** (memoria, reputación, sanciones).
+
+---
+
+## 2) Herramientas de diseño estratégico
+
+### A) Modificación de pagos (Recompensas / Castigos)
+
+- Ajustar la matriz de utilidades para que la cooperación sea **dominante o más atractiva**.
+- Condición:
+  [
+  U_{\text{coop}} \ge U_{\text{desviación}} + C_{\text{castigo}}
+  ]
+
+Esto genera un **equilibrio inducido**, no solo uno natural.
+
+---
+
+### B) Información observable y reputación
+
+- Hacer que las acciones sean **observables** permite que el pasado influya en el futuro.
+- Se traduce en **actualización bayesiana de creencias**, reputación dinámica y castigo automático a desviaciones.
+- Consecuencia: jugadores oportunistas **imitan cooperadores** para no perder credibilidad.
+
+---
+
+### C) Compromisos creíbles
+
+- Reducir el espacio de acciones disponibles tras comprometerse.
+- Métodos:
+
+  - Autolimitación (restricciones irreversibles)
+  - Reglas automáticas (acciones contingentes deterministas)
+  - Garantías externas (árbitros o mecanismos de verificación)
+
+- Resultado: la cooperación se convierte en **equilibrio sub-juego perfecto**.
+
+---
+
+### D) Coordinación de expectativas
+
+- Cuando existen **múltiples equilibrios**, el problema no es incentivar, sino **hacer predecible cuál equilibrio se alcanzará**.
+- Herramientas:
+
+  - Señales focales (marcadores estructurales, reglas, convenciones)
+  - Historia compartida
+  - Protocolos predefinidos
+
+Esto reduce la **ambigüedad estratégica** y refuerza la cooperación.
+
+---
+
+### E) Juegos repetidos y horizonte temporal
+
+- Extender el horizonte o la repetición del juego aumenta el peso de la reputación.
+- Factor crítico:
+  [
+  \delta > \frac{T-R}{T-P}
+  ]
+  donde (\delta) representa el **valor del futuro**.
+- Implicación: cooperación es más estable cuando **el futuro importa**.
+
+---
+
+## 3) Arquitectura general de diseño
+
+1. **Definir actores y tipos**
+   → determinar incentivos y riesgos.
+
+2. **Construir matriz de pagos ajustada**
+   → que favorezca cooperación frente a desviación.
+
+3. **Introducir observabilidad y reputación**
+   → la historia transforma el juego.
+
+4. **Garantizar compromiso creíble**
+   → restricciones, reglas automáticas, árbitros.
+
+5. **Coordinar expectativas cuando hay múltiples equilibrios**
+   → protocolos, señales, normas.
+
+---
+
+## 4) Principio final
+
+> La cooperación no depende de la buena voluntad, sino de la **arquitectura del juego y la institución**.
+> Diseñar bien significa transformar incentivos, información y restricciones de manera que **cooperar sea la decisión racional y estable**.
